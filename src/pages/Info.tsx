@@ -37,9 +37,9 @@ const Info = () => {
     const subject = encodeURIComponent("Friends of TUT - Comment from " + data.name);
     const body = encodeURIComponent(data.comment + "\n\nFrom: " + data.name + " (" + data.email + ")");
     window.location.href = `mailto:friendsoftut@gmail.com?subject=${subject}&body=${body}`;
-    toast.success("Opening email client with your comment! Thanks for the feedback 🎉");
+    toast.success("We have received your comment/feedback and will take it into consideration. Thank You for the support. We Setting the Bar! 🎉");
     form.reset();
-  };
+  }; 
 
   return (
     <>

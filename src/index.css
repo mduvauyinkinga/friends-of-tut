@@ -32,7 +32,7 @@
 
     --border: 0 0% 88%;
     --input: 0 0% 88%;
-    --ring: 350 86% 72%;
+    --ring: 330 80% 80%;
 
     --radius: 0.75rem;
 
@@ -52,7 +52,7 @@
     --font-display: 'Bebas Neue', sans-serif;
     --font-body: 'Inter', sans-serif;
 
-    --gradient-hero: linear-gradient(135deg, hsl(350 86% 72%), hsl(350 70% 60%));
+--gradient-hero: linear-gradient(135deg, hsl(330 80% 85%), hsl(330 70% 75%));
     --gradient-lime: linear-gradient(135deg, hsl(90 62% 62%), hsl(90 62% 50%));
   }
 }
@@ -96,8 +96,8 @@
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(255, 105, 180, 0.4);
   }
-  .pink-glow {
-    box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+  .light-pink-glow {
+    box-shadow: 0 0 20px rgba(248, 187, 217, 0.5);
   }
 }
 

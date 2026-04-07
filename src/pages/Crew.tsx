@@ -69,7 +69,7 @@ const Crew = () => (
 
     <section className="py-20">
       <div className="container">
-        {Object.entries(sections).map(([sectionName, members]: [string, any[]]) => (
+        {Object.entries(sections).map(([sectionName, members]: [string, Array<{name: string; role: string; img: string; social: string}>]) => (
           <section key={sectionName} className="mb-24 last:mb-0">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground drop-shadow-md text-center mb-12">
               {sectionName}
@@ -105,9 +105,9 @@ const Crew = () => (
                     </div>
                   </CardContent>
                 </Card>
-              ))}
-            </div>
-          </section>
+        ))}
+      </div>
+    </section>
         ))}
       </div>
     </section>

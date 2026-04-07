@@ -26,7 +26,7 @@ const Index = () => (
           A student-led creative movement — Fashion, Media, Music & Culture at Tshwane University of Technology.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
-          <Button asChild size="lg" className="bg-gradient-to-r from-pink-500 to-white text-black hover:from-pink-600 hover:to-gray-100 font-display text-lg tracking-wide shadow-lg rounded-full px-8">
+            <Button asChild size="lg" className="bg-gradient-to-r from-[#F8BBD9] to-white text-black hover:from-[#F48FB1] hover:to-gray-100 font-display text-lg tracking-wide shadow-lg rounded-full px-8">
             <Link to="/events">Upcoming Events <ArrowRight className="ml-2" size={18} /></Link>
           </Button>
           <Button asChild size="lg" className="bg-gradient-to-r from-black to-white text-black hover:from-gray-800 hover:to-gray-100 font-display text-lg tracking-wide shadow-lg rounded-full px-8">

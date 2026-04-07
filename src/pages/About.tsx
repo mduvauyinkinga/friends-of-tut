@@ -48,7 +48,7 @@ const About = () => (
             ].map((item) => (
               <div key={item.title} className="p-6 rounded-xl border border-border bg-card hover:shadow-lg hover:border-primary/30 transition-all duration-300 space-y-4">
                 <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-pink-300 to-purple-400 shadow-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-[#F8BBD9] via-[#F8BBD9]/80 to-purple-400 shadow-lg flex items-center justify-center flex-shrink-0">
                     {item.icon}
                   </div>
                   <h3 className="text-xl font-bold text-foreground drop-shadow-sm flex-1">{item.title}</h3>

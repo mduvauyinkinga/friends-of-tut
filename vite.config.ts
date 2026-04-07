@@ -25,27 +25,8 @@ export default defineConfig(({ mode }) => ({
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,jpeg}']
       },
-      manifest: {
-        short_name: "FOT",
-        name: "Friends of TUT",
-        description: "Student-led creative movement at Tshwane University of Technology",
-        theme_color: "#FF6FA1",
-        background_color: "#ffffff",
-        display: "standalone",
-        icons: [
-          {
-            src: "logo.jpeg",
-            sizes: "192x192",
-            type: "image/jpeg"
-          },
-          {
-            src: "logo.jpeg",
-            sizes: "512x512",
-            type: "image/jpeg",
-            purpose: "maskable"
-          }
-        ]
-      }
+      // manifest uses public/manifest.json
+
     })
   ].filter(Boolean),
   resolve: {

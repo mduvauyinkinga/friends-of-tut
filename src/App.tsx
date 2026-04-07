@@ -13,29 +13,31 @@ import Info from "./pages/Info";
 import Gallery from "./pages/Gallery";
 import NotFound from "./pages/NotFound";
 import SEO from "./components/SEO";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <HelmetProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
-          <Routes>
-            <Route element={<Layout />}>
-              <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/crew" element={<Crew />} />
-              <Route path="/events" element={<Events />} />
-              <Route path="/info" element={<Info />} />
-              <Route path="/gallery" element={<Gallery />} />
-            </Route>
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </HelmetProvider>
+        <HelmetProvider>
+          <ErrorBoundary>
+            <Toaster />
+            <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+              <Routes>
+                <Route element={<Layout />}>
+                  <Route path="/" element={<Index />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/crew" element={<Crew />} />
+                  <Route path="/events" element={<Events />} />
+                  <Route path="/info" element={<Info />} />
+                  <Route path="/gallery" element={<Gallery />} />
+                </Route>
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </BrowserRouter>
+          </ErrorBoundary>
+        </HelmetProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );
