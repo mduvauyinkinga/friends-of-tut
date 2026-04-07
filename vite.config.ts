@@ -7,6 +7,8 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 
 export default defineConfig(({ mode }) => ({
+  base: './', // for GH Pages root
+
   server: {
     host: "::",
     port: 8080,

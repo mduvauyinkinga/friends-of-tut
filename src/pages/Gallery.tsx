@@ -14,8 +14,8 @@ const galleryItems: GalleryItem[] = [
   { id: 1, title: "Campus Style Showcase 2025", category: "Fashion" },
   { id: 2, title: "Sunset Sessions Vol. 2", category: "Music" },
   { id: 3, title: "Behind the Scenes — Content Day", category: "Media" },
-{ id: 4, title: "Witbank Freshers 26'", category: "Events", type: "video", src: "/src/assets/Freshers.mp4", poster: "/src/assets/Thumbnail -Freshers.png" },
-  { id: 5, title: "Friends of TUT - TEES", category: "Fashion", type: "video", src: "/src/assets/Friends of TUT - TEES.mp4", poster: "/src/assets/thumbnail-TEES.png" },
+  { id: 4, title: "Witbank Freshers 26'", category: "Events", type: "video", src: "/assets/Freshers.mp4", poster: "/assets/Thumbnail -Freshers.png" },
+  { id: 5, title: "Friends of TUT - TEES", category: "Fashion", type: "video", src: "/assets/Friends of TUT - TEES.mp4", poster: "/assets/thumbnail-TEES.png" },
 ];
 
 const categories = ["All", "Fashion", "Music", "Media", "Events"];
@@ -111,7 +111,7 @@ const Gallery = () => {
                 src={currentItem.src} 
                 controls 
                 className="w-full h-auto max-h-[80vh] object-contain"
-                poster={currentItem.poster || "/public/placeholder.svg"}
+                poster={currentItem.poster || "/placeholder.svg"}
               >
                 Your browser does not support the video tag.
               </video>
