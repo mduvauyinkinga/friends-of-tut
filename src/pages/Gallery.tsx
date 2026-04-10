@@ -12,7 +12,7 @@ interface GalleryItem {
 
 const galleryItems: GalleryItem[] = [
   { id: 1, title: "Witbank Freshers 2026", category: "Events", src: "/assets/videos/Freshers.mp4", type: "video", poster: "/assets/Thumbnail-Freshers.png" },
-  { id: 2, title: "BTS Content 1", category: "Media", src: "/assets/videos/bts-1.mp4", type: "video", poster: "/thumbnail-TEES.png" },
+{ id: 2, title: "BTS Content 1", category: "Media", src: "/assets/videos/bts-1.mp4", type: "video", poster: "/assets/thumbnail-TEES.png" },
 ];
 
 const categories = ["All", "Fashion", "Music", "Media", "Events"];

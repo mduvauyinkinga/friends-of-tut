@@ -1,15 +1,12 @@
-# Task Progress: Add Crew.tsx, Index.tsx, Gallery.tsx to Website
+# Fix 404 and Gallery Media Issues - Progress Tracker
 
-## Plan Breakdown
-1. [x] Verify pages exist and are routed in App.tsx ✅ (Routes: / → Index, /crew → Crew, /gallery → Gallery)
-2. [x] Read Navbar.tsx ✅ (Already has /gallery and /crew links in both desktop/mobile)
-3. [x] Add missing nav links ✅ (No changes needed; Crew and Gallery already linked)
-4. [x] Update TODO.md ✅
-5. [ ] Test locally: Run `bun run dev` (or `npm run dev`), visit http://localhost:5173/{crew,gallery}
+## Current Plan Steps (Approved):
+- [x] 1. Copy missing thumbnails: src/assets/thumbnail-TEES.png, src/assets/Thumbnail-Freshers.png → public/assets/
+- [x] 2. Edit src/pages/Gallery.tsx: Fix poster paths in galleryItems
+- [x] 3. Edit index.html: Change absolute asset paths to relative (./)
+- [x] 4. Test dev server: npm run dev → check localhost:8081/ and /gallery (note: port 8081 due to 8080 busy)
+- [x] 5. Rebuild & preview: npm run build && npm run preview
+ - [x] 6. Update TODO-gallery-fix.md and attempt_completion
 
-## Status
-✅ **Complete**: Pages routed and navigable via Navbar. Run dev server to verify live.
-
-**No code changes made.**
-
+**Next step marked on completion.**
 
