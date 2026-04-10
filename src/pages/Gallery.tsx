@@ -5,21 +5,18 @@ interface GalleryItem {
   id: number;
   title: string;
   category: string;
+  src: string;
   type?: 'video';
-  src?: string;
   poster?: string;
 }
 
 const galleryItems: GalleryItem[] = [
-  { id: 1, title: "Campus Style Showcase 2025", category: "Fashion" },
-  { id: 2, title: "Sunset Sessions Vol. 2", category: "Music" },
-  { id: 3, title: "Behind the Scenes — Content Day", category: "Media" },
-  { id: 4, title: "Witbank Freshers 26'", category: "Events", type: "video", src: "/assets/Freshers.mp4", poster: "/assets/Thumbnail -Freshers.png" },
-  { id: 5, title: "Friends of TUT - TEES", category: "Fashion", type: "video", src: "/assets/Friends of TUT - TEES.mp4", poster: "/assets/thumbnail-TEES.png" },
+  { id: 1, title: "Witbank Freshers 2026", category: "Events", src: "/assets/videos/Freshers.mp4", type: "video", poster: "/assets/Thumbnail-Freshers.png" },
+  { id: 2, title: "BTS Content 1", category: "Media", src: "/assets/videos/bts-1.mp4", type: "video", poster: "/thumbnail-TEES.png" },
 ];
 
 const categories = ["All", "Fashion", "Music", "Media", "Events"];
-
+    
 // Generate placeholder colors based on category
 const categoryGradients: Record<string, string> = {
   Fashion: "from-primary to-primary/70",
@@ -40,7 +37,7 @@ const Gallery = () => {
     <>
       <section className="gradient-hero py-16 md:py-24">
         <div className="container text-center">
-          <h1 className="text-5xl md:text-7xl text-primary-foreground mb-4">GALLERY!</h1>
+          <h1 className="text-5xl md:text-7xl text-primary-foreground mb-4">GALLERY</h1>
           <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
             Moments captured from our events, shoots, and creative sessions.
           </p>
@@ -106,15 +103,25 @@ const Gallery = () => {
             className="max-w-6xl w-full max-h-[90vh] overflow-hidden rounded-3xl shadow-2xl mx-4" 
             onClick={(e) => e.stopPropagation()}
           >
-            {currentItem.type === 'video' && currentItem.src ? (
+{currentItem.type === 'video' && currentItem.src ? (
               <video 
                 src={currentItem.src} 
                 controls 
+                autoPlay 
+                muted 
+                playsInline
                 className="w-full h-auto max-h-[80vh] object-contain"
                 poster={currentItem.poster || "/placeholder.svg"}
               >
                 Your browser does not support the video tag.
               </video>
+            ) : currentItem.src ? (
+              <img 
+                src={currentItem.src}
+                alt={currentItem.title}
+                className="w-full h-auto max-h-[80vh] object-contain rounded-3xl shadow-2xl"
+                loading="lazy"
+              />
             ) : (
               <div className={`aspect-video w-full rounded-3xl bg-gradient-to-br ${categoryGradients[currentItem.category]} flex flex-col items-center justify-center p-12 text-center shadow-2xl`}>
                 <span className="text-sm font-semibold bg-background/30 backdrop-blur px-6 py-2 rounded-xl text-primary-foreground mb-6">{currentItem.category}</span>
