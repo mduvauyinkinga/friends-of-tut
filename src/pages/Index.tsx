@@ -20,7 +20,7 @@ const Index = () => (
       <div className="container py-20 md:py-32 flex flex-col items-center text-center relative z-10">
         <img src={logo} alt="Friends of TUT" className="w-32 h-32 md:w-44 md:h-44 lg:w-48 lg:h-48 xl:w-56 xl:h-56 rounded-2xl shadow-2xl mb-8 animate-fade-in" />
         <h1 className="text-4xl md:text-6xl lg:text-7xl text-primary-foreground leading-none mb-4">
-          FRIENDS OF TUT
+FRIENDS OF TUT!
         </h1>
         <p className="text-lg md:text-xl text-primary-foreground/80 max-w-xl mb-8 font-body">
           A student-led creative movement — Fashion, Media, Music & Culture at Tshwane University of Technology.

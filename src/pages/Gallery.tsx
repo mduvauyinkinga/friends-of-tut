@@ -40,7 +40,7 @@ const Gallery = () => {
     <>
       <section className="gradient-hero py-16 md:py-24">
         <div className="container text-center">
-          <h1 className="text-5xl md:text-7xl text-primary-foreground mb-4">GALLERY</h1>
+          <h1 className="text-5xl md:text-7xl text-primary-foreground mb-4">GALLERY!</h1>
           <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
             Moments captured from our events, shoots, and creative sessions.
           </p>

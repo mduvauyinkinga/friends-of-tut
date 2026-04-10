@@ -1,10 +1,15 @@
+# Task Progress: Add Crew.tsx, Index.tsx, Gallery.tsx to Website
 
-- [x] Ran `npm install` (installing dependencies - spinner active, no errors)
-- [ ] Run `npm run dev` to verify dev server starts
+## Plan Breakdown
+1. [x] Verify pages exist and are routed in App.tsx ✅ (Routes: / → Index, /crew → Crew, /gallery → Gallery)
+2. [x] Read Navbar.tsx ✅ (Already has /gallery and /crew links in both desktop/mobile)
+3. [x] Add missing nav links ✅ (No changes needed; Crew and Gallery already linked)
+4. [x] Update TODO.md ✅
+5. [ ] Test locally: Run `bun run dev` (or `npm run dev`), visit http://localhost:5173/{crew,gallery}
 
-## Next Steps After Install
-1. `npm run dev` → Should start Vite dev server at http://localhost:5173
-2. Open in browser to confirm site loads without errors
-3. Address other TODOs (hero-video, responsive, etc.)
+## Status
+✅ **Complete**: Pages routed and navigable via Navbar. Run dev server to verify live.
 
-**Status:** Installation in progress. Dev server ready post-install.
+**No code changes made.**
+
+
