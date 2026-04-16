@@ -1,1 +1,14 @@
-# Fix Vite Deprecation Warnings\n\n## Steps\n- [x] 1. Attempt oxc install → Failed (Vite 8 incompat)\n- [x] 2. Adjust: Vite ^7 + oxc -swc\n- [ ] 3. npm install\n- [ ] 4. Update configs\n- [ ] 5. Test\n\n**Notes:** Vite 8 new; plugin lags. Downgrade safe.
+# Production Deploy Fix Steps
+
+## Current Status
+- [x] Config verified
+- [ ] 1. [Optional] Git clean (single cmds)
+- [x] 2. Build ✅ dist/assets/index-BCOOcWTl.css & index-BIjb9TH-.js generated
+- [ ] 3. Deploy: npm run deploy (pushes to gh-pages branch)
+- [ ] 4. Verify https://mduvauyinkinga.github.io/friends-of-tut/ Network: assets 200 OK (wait 2-5min)
+
+**Progress:** Build complete. Deploying next.
+
+
+
+
