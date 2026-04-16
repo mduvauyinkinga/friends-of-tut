@@ -1,3 +1,10 @@
+User-agent: *
+Disallow: /src/
+Disallow: /dist/
+Disallow: /assets/BTS/
+Disallow: /assets/Ambassadors/private/
+
+# Allow search engines
 User-agent: Googlebot
 Allow: /
 
@@ -10,5 +17,4 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
-Allow: /
+Sitemap: https://friendsoftut.co.za/sitemap.xml

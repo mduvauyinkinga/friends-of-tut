@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
+import security from "vite-plugin-security";
 import path from "path";
 // import { VitePWA } from "vite-plugin-pwa";
 import { componentTagger } from "lovable-tagger";
@@ -9,15 +10,21 @@ import { componentTagger } from "lovable-tagger";
 export default defineConfig(({ mode }) => ({
   base: './',
   server: {
-    host: "::",
+    host: "localhost",
     port: 8080,
     hmr: {
       overlay: false,
     },
   },
   plugins: [
-    react(), 
+    react(),
     mode === "development" && componentTagger(),
+    security({
+      csp: {
+        reportOnly: false
+      },
+      referrerPolicy: "strict-origin-when-cross-origin"
+    }),
 // VitePWA removed to fix build - add back after npm update vite-plugin-pwa
 
   ].filter(Boolean),

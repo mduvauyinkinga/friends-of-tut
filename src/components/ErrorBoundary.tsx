@@ -16,7 +16,8 @@ class ErrorBoundary extends React.Component<React.PropsWithChildren<object>, Err
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('ErrorBoundary caught error:', error, errorInfo);
+    // Sanitized error logging (no stack traces in prod)
+    console.error('ErrorBoundary caught error:', error.message, errorInfo.componentStack?.substring(0, 500));
   }
 
   render() {
