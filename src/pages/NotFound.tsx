@@ -8,7 +8,10 @@ const NotFound = () => {
   const location = useLocation();
 
   useEffect(() => {
-    console.error("404 Error: User attempted to access non-existent route:", location.pathname);
+    // Suppress noisy console.error for GitHub Pages subpaths
+    if (!location.pathname.startsWith('/friends-of-tut/')) {
+      console.error("404 Error: User attempted to access non-existent route:", location.pathname);
+    }
   }, [location.pathname]);
 
   return (
